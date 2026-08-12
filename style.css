@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f9ef;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #6fae3f;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+footer {
+  background: #47822a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+h2,
+h3 {
+  color: #47822a;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+/* Layout: 1 kolom di HP, 2 kolom di layar laptop (Grid) */
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+
+/* Kolom kiri: foto pola lingkaran */
+.foto img {
+  display: block;
+  width: 320px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #6fae3f;
+  margin: auto;
+}
+
+/* Kolom kanan: tabel biodata */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+th,
+td {
+  border: 1px solid #cfe3bd;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
+th {
+  background: #eef6e6;
+  width: 35%;
+}
+
+/* Ikon sosial media: SVG */
+.sosmed a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #0d0d0d;
+}
+.sosmed svg {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
